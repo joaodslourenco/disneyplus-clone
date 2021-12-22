@@ -1,6 +1,19 @@
+import { auth, provider } from "../firebase"
 import styled from "styled-components"
 
+
 export default function Header() {
+  const handleAuth = () => {
+    auth
+    .signInWithPopup(provider)
+    .then((result) => {
+      console.log(result)
+    })
+      .catch((error) => {
+      alert(error.message)
+    })
+  }
+  
   return (
     <Nav>
       <Logo src="/images/logo.svg"/>
@@ -32,6 +45,7 @@ export default function Header() {
 
       </NavMenu>
       <UserImg src="https://avatars.githubusercontent.com/u/90736469?v=4"/>
+      <LoginBtn onClick={handleAuth}> login </LoginBtn>
     </Nav>
   )
 }
@@ -102,4 +116,22 @@ const UserImg = styled.img`
   height: 48px;
   border-radius: 50%;
   cursor: pointer;
+`
+
+
+const LoginBtn = styled.a`
+background-color: rgba(0, 0, 0, 0.6);
+padding: 8px 16px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+border: 1px solid #f9f9f9;
+border-radius: 4px;
+transition: all 200ms ease 0s;
+cursor: pointer;
+
+&:hover {
+  background-color: #f9f9f9;
+  color: #000;
+  border-color: transparent;
+}
 `

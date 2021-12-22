@@ -9,6 +9,12 @@ import db from "../firebase"
 
 export default function Home() {
   
+useEffect(()=> {
+  db.collection("movies").onSnapshot((snapshot) => {
+    console.log(snapshot);
+  })
+})
+
   return (
     <Container>
       <ImgSlider />
