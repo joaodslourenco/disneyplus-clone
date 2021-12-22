@@ -1,7 +1,7 @@
-import Header from "./Header"
 import styled from "styled-components"
 import ImgSlider from "./ImgSlider"
 import Viewers from "./Viewers"
+import Movies from "./Movies"
 
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
     <Container>
       <ImgSlider />
       <Viewers />
+      <Movies />
     </Container>
   )
 }
