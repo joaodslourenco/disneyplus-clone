@@ -2,9 +2,13 @@ import styled from "styled-components"
 import ImgSlider from "./ImgSlider"
 import Viewers from "./Viewers"
 import Movies from "./Movies"
+import { useEffect } from "react"
+import db from "../firebase"
+
 
 
 export default function Home() {
+  
   return (
     <Container>
       <ImgSlider />

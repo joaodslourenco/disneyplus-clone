@@ -64,7 +64,7 @@ const ImageTitle = styled.div`
   min-height: 170px;
   width: 35vw;
   min-width: 200px;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 50px;
   img {
     height: 100%;
@@ -92,6 +92,8 @@ const PlayButton = styled.button`
   border: none;
   letter-spacing: 1.8px;
   cursor: pointer;
+  transition: all 250ms;
+
 
   &:hover {
     background: rgb(198, 198, 198);
@@ -136,4 +138,5 @@ const Description = styled.div`
   font-size: 20px;
   margin-top: 16px;
   color: rgb(249, 249, 249);
+  max-width: 760px;
 `
