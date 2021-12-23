@@ -7,7 +7,7 @@ import db from "../firebase"
 
 
 
-export default function Home() {
+export default function Home(props) {
   
 useEffect(()=> {
   db.collection("movies").onSnapshot((snapshot) => {
