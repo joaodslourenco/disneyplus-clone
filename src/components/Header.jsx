@@ -148,7 +148,10 @@ const NavMenu = styled.div`
       font-size: 13px;
       letter-spacing: 1.42px;
       position: relative;
-
+      
+      @media (max-width: 768px) {
+  display: none;
+}
         &:after {
           content: "";
           height: 2px;
@@ -162,6 +165,8 @@ const NavMenu = styled.div`
           transform-origin: left center;
           transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
         }
+
+        
     }
     &:hover {
       span:after {
@@ -169,6 +174,10 @@ const NavMenu = styled.div`
         opacity: 1;
       }
     }
+
+    @media (max-width: 768px) {
+  gap: 5px;
+}
   }
 
 
@@ -176,6 +185,7 @@ const NavMenu = styled.div`
 
 const UserImg = styled.img`
   height: 100%;
+  width: 100%;
   cursor: pointer;
   justify-content: flex-end;
 `
