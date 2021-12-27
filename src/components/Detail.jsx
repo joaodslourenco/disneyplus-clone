@@ -1,14 +1,33 @@
 import styled from "styled-components"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import db from "../firebase"
+
 
 
 export default function Detail() {
+  const { id } = useParams()
+  const [detailData, setDetailData] = useState({})
+
+  useEffect(() => {
+    db.collection('movies').doc(id).get().then((doc)=> {
+      if (doc.exists) {
+        setDetailData(doc.data())
+      } else {
+        console.log("no such document in firebase")
+      }
+    }).catch((error) => {
+      console.log('error getting document:', error)
+    })
+  }, [id])
+  
   return (
     <Container>
       <Background>
-        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4F39B7E16726ECF419DD7C49E011DD95099AA20A962B0B10AA1881A70661CE45/scale?width=1440&aspectRatio=1.78&format=jpeg" alt="" />
+        <img src={detailData.backgroundImg} alt={detailData.title} />
       </Background>
       <ImageTitle>
-        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78" alt="" />
+        <img src={detailData.titleImg} alt={detailData.title} />
       </ImageTitle>
       <Controls>
         <PlayButton>
@@ -27,10 +46,10 @@ export default function Detail() {
         </GroupWatchButton>
       </Controls>
       <SubTitle>
-        2018 . 7m . Family, Kids, Animation
+        {detailData.subtitle}
       </SubTitle>
       <Description>
-        A Chinese mom who's sad when her grown son...
+        {detailData.description}
       </Description>
     </Container>
   )
@@ -60,18 +79,17 @@ const Background = styled.div`
 `
 
 const ImageTitle = styled.div`
-  height: 30vh;
-  min-height: 170px;
+  min-height: 120px;
+  height: 150px;
   width: 35vw;
   min-width: 200px;
-  margin-top: 60px;
+  margin-top: 130px;
   margin-bottom: 50px;
   img {
     height: 100%;
     width: 100%;
     object-fit: contain;
-    
-    
+
   }
 `
 
@@ -136,7 +154,7 @@ const SubTitle = styled.div`
 const Description = styled.div`
   line-height: 1.4;
   font-size: 20px;
-  margin-top: 16px;
+  margin-top: 12px;
   color: rgb(249, 249, 249);
-  max-width: 760px;
+  max-width: 40vw;
 `
