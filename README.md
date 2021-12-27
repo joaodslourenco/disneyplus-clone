@@ -1,3 +1,7 @@
+This is a clone of Disney Plus page. Built using React, Redux, Styled-Components and Firebase. You can access it at https://disneyplus-clone-60f48.web.app/home
+
+##
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
