@@ -1,48 +1,39 @@
-This is a clone of Disney Plus page. Built using React, Redux, Styled-Components and Firebase. You can access it at https://disneyplus-clone-60f48.web.app/home
-
 ##
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/joaodslourenco/disneyplus-clone">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<h1 align="center">Disney+ Clone</h1>
 
-## Available Scripts
+  <p align="center">
+    Project aimed to clone Disney+ interface. Built using React, Redux, Styled-Components and Firebase
+    <br />
+    <br />
+    <a href="https://disneyplus-clone-60f48.web.app/home">View Demo</a>
+    ·
+    <a href="https://github.com/joaodslourenco/disneyplus-clone/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/joaodslourenco/disneyplus-clone/issues">Request Feature</a>
+  </p>
+</div>
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
+## About The Project
+![login](https://user-images.githubusercontent.com/90736469/149569232-5db03c4c-3680-4bdb-8264-4e8362ea0ecd.jpg)
+![homescreen](https://user-images.githubusercontent.com/90736469/149569243-eae66360-058d-4c87-8dd8-b912e76be6df.jpg)
+![movies-database](https://user-images.githubusercontent.com/90736469/149569255-993426e1-1891-4dcd-912a-173eed5efbdb.jpg)
+![movie-detail](https://user-images.githubusercontent.com/90736469/149569288-a4c8c280-b54b-4d6b-a0f8-425a902fd5bf.jpg)
 
-### `npm start`
+ You can access it at https://disneyplus-clone-60f48.web.app/home
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project consists on the a clone of Disney+ page. Using Google Authentication to login and Firebase to manage the movie database that is shown on screen.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Built With
 
-### `npm test`
+* [React.js](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
+* [Styled Components](https://styled-components.com/)
+* [Firebase](https://firebase.google.com/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
